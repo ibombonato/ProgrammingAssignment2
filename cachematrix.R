@@ -11,8 +11,11 @@ makeCacheMatrix <- function(x = matrix()) {
         solved <- NULL
         
         ## Creating a variable that returns a function for set the value of the matrix
+        ## and setting new values for new matrices
         set <- function(y) {
+                ## Set new value for x with the new matrix
                 x <<- y
+                ## Clear cache when a new matrix is created using the set function
                 solved <<- NULL
         }
         
