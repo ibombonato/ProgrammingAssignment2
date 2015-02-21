@@ -42,11 +42,12 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
         
-        ## Set the solved variable using getsolve from makeCacheMatrix to returning 
-        ## the value of the solve
+        ## Set the solved variable using getsolve from makeCacheMatrix to 
+        ## returning the value of the solve from cache
         solved <- x$getsolve()
         
-        ## If the value returned was not null, then we return this value to the user
+        ## If the value returned from cache was not null, 
+        ## then we return this cached value to the user
         if(!is.null(solved)) {
                 ## Message the user that the data are from "cache"
                 message("getting cached data")
